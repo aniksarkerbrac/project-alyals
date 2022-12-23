@@ -1,0 +1,38 @@
+
+.top-nav{
+    /* background-color: pink; */
+    border-top: 1px solid pink;
+    border-bottom: 1px solid pink;
+}
+.header nav{
+    
+    padding-top: 20px;
+    padding-bottom: 20px;
+    line-height: 40px;
+    font-size: 12px; 
+    font-weight: 500;
+}
+nav img{
+    width: 200px;
+}
+nav a{
+    text-align: right;
+    text-decoration: none;
+    color: black;
+    margin-right: 20px;
+    padding: 5px;
+}
+.top-nav nav{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    line-height: 40px;
+    font-size: 12px;
+    font-weight: 400;
+}
+@media(max-width: 640px){
+    .header{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+    }
+}

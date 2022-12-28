@@ -1,36 +1,37 @@
-.style-card{
-    border: none !important;
-    /* box-shadow: 2px 2px 5px grey; */
+.style-card {
+  border: none !important;
+  /* box-shadow: 2px 2px 5px grey; */
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
-.card:hover{
+/* .card:hover{
     border-radius: 0%;
     box-shadow: 2px 2px 5px grey;
+} */
+.btn-style {
+  /* display: none; */
+  background-color: pink !important;
+  padding: 5px 10px;
 }
-.btn-style{
-    /* display: none; */
-    background-color: pink !important;
-    padding: 5px 10px;
+.price-style {
+  /* background-color: pink !important; */
+  color: grey;
+  font-weight: bold;
+  padding: 0px 10px;
+  border-radius: 2px;
 }
-.price-style{
-    /* background-color: pink !important; */
-    color: grey;
-    font-weight: bold;
-    padding: 0px 10px;
-    border-radius: 2px;
+.button-custom {
+  background: transparent !important;
+  color: pink !important;
+  border-radius: 0% !important;
+  border-color: pink !important;
 }
-.button-custom{
-    background: transparent !important;
-    color: pink !important;
-    border-radius: 0% !important;
-    border-color: pink !important;
-}
-.button-custom:hover{
-    color: white !important;
-    background: pink !important;
-    border-color: white !important;
-}
-/* .tooltip-style{
-    color: white !important;
-    background-color: pink !important;
-    border-radius: 0% !important;
+/* .button-custom:hover {
+  color: white !important;
+  background: pink !important;
+  border-color: white !important;
+} */
+/* .tooltip-style {
+  color: white !important;
+  background-color: pink !important;
+  border-radius: 0% !important;
 } */

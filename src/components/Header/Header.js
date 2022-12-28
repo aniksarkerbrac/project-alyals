@@ -27,7 +27,7 @@ const Header = () => {
           <FavoriteBorderOutlinedIcon />
           <span className=""> WISHLIST (0)</span>
         </Link>
-        <Link to="/inventory/addProduct">
+        <Link to="/login">
           <span className="">LOGIN</span>
         </Link>
       </nav>

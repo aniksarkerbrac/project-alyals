@@ -1,0 +1,21 @@
+.footer-name {
+  color: #e8b2a3;
+  font-family: "Hind Siliguri", sans-serif;
+  font-size: 22px;
+  font-weight: 800 !important;
+  margin-top: -1rem;
+}
+.footer-name-desc {
+  font-family: "Hind Siliguri", sans-serif;
+  color: #26235d;
+  font-size: 15px;
+  font-weight: 500;
+}
+.footer-subname {
+  color: #e8b2a3 !important;
+  font-family: "Hind Siliguri", sans-serif !important;
+}
+.footer-para {
+  font-family: "Hind Siliguri", sans-serif;
+  color: #26235d;
+}

@@ -4,7 +4,7 @@ import Card from "../Card/Card";
 import Footer from "../Footer/Footer";
 
 const Home = () => {
-  const productStatus = ["NEW ARRIVAL", "SALE"];
+  const productStatus = ["New Arrival", "Sale"];
   return (
     <div className="container p-2 px-5">
       <Carousels></Carousels>

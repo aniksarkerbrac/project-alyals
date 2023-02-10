@@ -1,5 +1,8 @@
 import React from "react";
 import FooterCol from "../FooterCol/FooterCol";
+import img1 from "./Fb Icon.svg";
+import img2 from "./Twitter Icon.svg";
+import img3 from "./YT Icon.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { fab } from "@fortawesome/free-brands-svg-icons";
@@ -35,7 +38,7 @@ const Footer = () => {
   return (
     <footer className="mb-0">
       <div className="container pt-5">
-        <hr className="mt-4" style={{ color: " #e8b2a3" }} />
+        <hr className="mt-4" style={{ color: "#e8b2a3" }} />
         <div className="row pt-5">
           <FooterCol title="" items={details}>
             <div>
@@ -74,31 +77,16 @@ const Footer = () => {
               +8801779966880
             </p>
           </FooterCol>
-          <hr className="mt-4" style={{ color: "pink" }} />
-          <div className="d-flex justify-content-between text-muted">
+          <hr className="mt-4" style={{ color: "#e8b2a3" }} />
+          <div className="d-flex justify-content-between ">
             <div>
-              <FontAwesomeIcon
-                style={icon}
-                className="m-1"
-                icon={["fab", "facebook-square"]}
-              />
-              <FontAwesomeIcon
-                style={icon}
-                className="m-1"
-                icon={["fab", "twitter-square"]}
-              />
-              <FontAwesomeIcon
-                style={icon}
-                className="m-1"
-                icon={["fab", "youtube-square"]}
-              />
-              <FontAwesomeIcon
-                style={icon}
-                className="m-1"
-                icon={["fab", "linkedin"]}
-              />
+              <img src={img1} alt="" height="25" width="25" className="me-2" />
+              <img src={img2} alt="" height="25" width="25" className="mx-2" />
+              <img src={img3} alt="" height="25" width="25" className="mx-2" />
             </div>
-            <p>Copyright {new Date().getFullYear()} All Rights Reserved</p>
+            <p className="copyright">
+              Copyright {new Date().getFullYear()} All Rights Reserved.
+            </p>
           </div>
         </div>
       </div>

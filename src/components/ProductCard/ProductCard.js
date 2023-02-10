@@ -1,12 +1,6 @@
 import React from "react";
 import "./ProductCard.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faMapMarkerAlt,
-  faCalendarWeek,
-  faEnvelope,
-  faPhoneSquareAlt,
-} from "@fortawesome/free-solid-svg-icons";
+
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import Button from "react-bootstrap/Button";
@@ -14,8 +8,7 @@ import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
 
 const ProductCard = (props) => {
-  const { title, description, img, price, location, days, date } =
-    props.package;
+  const { title, description, img, price } = props.package;
   return (
     <div>
       <div
@@ -28,6 +21,14 @@ const ProductCard = (props) => {
           <h5 class="card-title">{title}</h5>
           <p class="card-text product-desc">{description.slice(0, 20)}...</p>
           <p className="price-style m-2">TK {price}</p>
+          <Button className="button-custom mx-1" size="sm">
+            <ShoppingCartOutlinedIcon />
+          </Button>
+
+          <Button className="button-custom mx-1" size="sm">
+            <FavoriteBorderOutlinedIcon />
+          </Button>
+
           {/* <OverlayTrigger
             key="top"
             placement="top"
@@ -40,9 +41,9 @@ const ProductCard = (props) => {
             <Button className="button-custom mx-1" size="sm">
               <ShoppingCartOutlinedIcon />
             </Button>
-          </OverlayTrigger>
+          </OverlayTrigger> */}
 
-          <OverlayTrigger
+          {/* <OverlayTrigger
             key="top"
             placement="top"
             overlay={

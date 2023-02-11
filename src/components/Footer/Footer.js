@@ -1,5 +1,5 @@
 import React from "react";
-import FooterCol from "../FooterCol/FooterCol";
+import FooterCol from "./FooterCol/FooterCol";
 import img1 from "./Fb Icon.svg";
 import img2 from "./Twitter Icon.svg";
 import img3 from "./YT Icon.svg";

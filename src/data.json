@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "NSX002",
+    "description": "Some quick example text to build on the card title and make up the bulk of the cards content.",
+    "img": "https://media.istockphoto.com/id/1136422297/photo/face-cream-serum-lotion-moisturizer-and-sea-salt-among-bamboo-leaves.jpg?s=612x612&w=0&k=20&c=mwzWVrDvJTkHlVf-8RL49Hs5xjuv1TrYcBW4DnWVt-0=",
+    "location": "chittagong",
+    "price": "5000",
+    "days": "5",
+    "date": "September 10,2021"
+  },
+  {
+    "id": 2,
+    "title": "NSX003",
+    "description": "Some quick example text to build on the card title and make up the bulk of the cards content.",
+    "img": "https://media.istockphoto.com/id/1198863709/photo/skin-and-hair-care-beauty-product-mock-up-lotion-bottle-oil-cream-isolated-on-white-3d-render.jpg?s=612x612&w=0&k=20&c=_0-9dLUohaQrThH0669Ygx3Ar17rX0cRkXy0cEexfQw=",
+    "location": "chittagong",
+    "price": "6000",
+    "days": "5",
+    "date": "September 10,2021"
+  },
+  {
+    "id": 3,
+    "title": "NSX025",
+    "description": "Some quick example text to build on the card title and make up the bulk of the cards content.",
+    "img": "https://cdn.shopify.com/s/files/1/0100/6239/7491/products/daphneFamily_600x800_crop_bottom.jpg?v=1648048513",
+    "location": "chittagong",
+    "price": "8000",
+    "days": "5",
+    "date": "September 10,2021"
+  },
+  {
+    "id": 4,
+    "title": "Air Max",
+    "description": "Some quick example text to build on the card title and make up the bulk of the cards content.",
+    "img": "https://images.pexels.com/photos/335257/pexels-photo-335257.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
+    "location": "chittagong",
+    "price": "8000",
+    "days": "5",
+    "date": "September 10,2021"
+  },
+  {
+    "id": 5,
+    "title": "Air Max1",
+    "description": "Some quick example text to build on the card title and make up the bulk of the cards content.",
+    "img": "https://ashley-nicole-johnson.com/wp-content/uploads/2017/07/392A0389.jpg",
+    "location": "chittagong",
+    "price": "8003",
+    "days": "5",
+    "date": "September 10,2021"
+  },
+  {
+    "id": 6,
+    "title": "Air Max2",
+    "description": "Some quick example text to build on the card title and make up the bulk of the cards content.",
+    "img": "https://expertphotography.b-cdn.net/wp-content/uploads/2019/05/product-photography-business-5.jpg",
+    "location": "chittagong",
+    "price": "8001",
+    "days": "6",
+    "date": "September 10,2021"
+  }
+]

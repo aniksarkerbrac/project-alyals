@@ -6,23 +6,30 @@ import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlin
 import Button from "react-bootstrap/Button";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import Tooltip from "react-bootstrap/Tooltip";
+import { CartState } from "../../Context/Context";
 
-const ProductCard = (props) => {
-  const { title, description, img, price } = props.package;
+const ProductCard = ({packages}) => {
+  // const { title, description, img, price } = props.package;
+  const {state:{cart},dispatch}=CartState()
   return (
     <div>
       <div
         className="style-card card p-2 m-0"
         style={{ width: "15rem", height: "20rem" }}
       >
-        <img src={img} alt="" className="product-img" />
+        <img src={packages.img} alt="" className="product-img" />
 
         <div class="card-body text-center">
-          <h5 class="card-title">{title}</h5>
-          <p class="card-text product-desc">{description.slice(0, 20)}...</p>
-          <p className="price-style m-2">TK {price}</p>
+          <h5 class="card-title">{packages.title}</h5>
+          <p class="card-text product-desc">{packages.description.slice(0, 20)}...</p>
+          <p className="price-style m-2">TK {packages.price}</p>
           <Button className="button-custom mx-1" size="sm">
-            <ShoppingCartOutlinedIcon />
+            <ShoppingCartOutlinedIcon onClick={()=>{
+              dispatch({
+                type:"ADD_TO_CART",
+                payload:packages,
+              })
+            }}/>
           </Button>
 
           <Button className="button-custom mx-1" size="sm">

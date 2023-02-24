@@ -6,6 +6,7 @@ import TopNavbar from "./components/TopNavbar/TopNavbar";
 import Register from "./components/Signup/Register";
 import Login from "./components/SignIn/Login";
 import Checkout from "./components/Checkout/Checkout";
+import ProductDetails from "./components/ProductDetails/ProductDetails.jsx";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
         <Route exact path="/register" element={<Register></Register>} />
         <Route exact path="/login" element={<Login></Login>} />
         <Route exact path="/checkout" element={<Checkout></Checkout>} />
+        <Route exact path="/product-details" element={<ProductDetails></ProductDetails>} />
       </Routes>
     </Router>
   );

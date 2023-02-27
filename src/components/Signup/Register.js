@@ -5,10 +5,31 @@ import { useForm } from "react-hook-form";
 import regimg from "./134945-zpunet-icon.mp4"
 import "./Register.css"
 import { Container, Row,Col} from "react-bootstrap";
+import axios from "axios";
 
 
 export default function Register() {
+  // const [formData, setFormData] = useState({
+  //   email: '',
+  //   password: '',
+  // });
+ 
+
+  
+
+  
   const { register, handleSubmit, errors, watch } = useForm();
+  const onSubmit = async (data) => {
+    try {
+      const response = await axios.post('https://app-72e33e07-be7e-4025-af7d-6061359ca520.cleverapps.io/authenticate', data);
+      localStorage.setItem('token', response.data.token);
+      console.log(response.data);
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+
   const validatePhoneNumber = (value) => {
     const regex = /^[0-9\b]+$/; // Regex to allow only numbers
     if (!value) {
@@ -20,23 +41,25 @@ export default function Register() {
     }
   };
 
-  const onSubmit = (data) => console.log(data);
+  
   return (
     <>
     
       <Header></Header>
-<Container>
-<h1 className="signup-header">Please Register Here</h1>
+      <h1 className="signup-header">Please Register Here</h1>
+<Container className="form-cont ms-4">
+
 <Row>
 <Col xs={12} md={6}>
 <form>
         <form onSubmit={handleSubmit(onSubmit)}>
           <input
             placeholder="Enter your firstName"
-            {...register("firstName", { required: true, maxLength: 20 })}
+            {...register("firstName", { required: true, maxLength: 20 })} 
+            className="mb-2"
           />
 
-          <input placeholder="Enter your lastName" {...register("lastName", { required: true, maxLength: 20 })} />
+          <input placeholder="Enter your lastName" {...register("lastName", { required: true, maxLength: 20 })}   className="mb-2" />
 
 
           <input
@@ -50,6 +73,7 @@ export default function Register() {
                   "Password must contain at least one letter and one number",
               },
             })}
+            className="mb-2"
           />
 
           <input
@@ -60,24 +84,27 @@ export default function Register() {
               validate: (value) =>
                 value === watch("password") || "The passwords do not match",
             })}
+            className="mb-2"
           />
 
           <input
             placeholder="Enter your address"
             {...register("address", { required: true, maxLength: 20 })}
+            className="mb-2"
           />
 
           <input
             placeholder="Enter your phone number"
             {...register("phone", { validate: validatePhoneNumber })}
+            className="mb-2"
           />
 
           <input
            placeholder="Enter your City"
-           {...register("city", { required: true })} />
+           {...register("city", { required: true })}   className="mb-2" />
 
          
-          <input type="submit"  className="bg-success border-0"/>
+          <input type="submit"  className="bg-success border-0 text-light"/>
         </form>
       </form>
            
@@ -85,8 +112,17 @@ export default function Register() {
 
 
           <Col xs={12} md={6}>
+          <video
+                loop="true"
+                autoplay="autoplay"
+                muted
+                width={400} height={400}
+                className="lotti-vid"
+              >
+                <source src={regimg} type="video/mp4"  style={{marginTop:'4rem'}}/>
+              </video>
 
-            <video src={regimg} width={400} height={400} loop style={{marginTop:'4rem'}}></video>
+            {/* <video src={regimg} width={400} height={400} loop style={{marginTop:'4rem'}}></video> */}
           </Col>
 </Row>
 

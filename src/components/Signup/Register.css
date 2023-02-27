@@ -20,3 +20,20 @@ input::placeholder{
     font-family: "Hind Siliguri", sans-serif;
 color: #26235d;
 }
+
+@media only screen and (max-width: 700px) {
+   
+    .signup-header{
+font-size: 25px;
+margin-left: 2rem;
+    }
+    .lotti-vid{
+        margin-top: 2rem;
+        width: 250px;
+        height: 250px;
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 1024px) {
+   
+  }

@@ -1,4 +1,4 @@
-import * as React from "react";
+import React from "react";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import { useForm } from "react-hook-form";
@@ -6,29 +6,38 @@ import regimg from "./134945-zpunet-icon.mp4"
 import "./Register.css"
 import { Container, Row,Col} from "react-bootstrap";
 import axios from "axios";
+import { toast } from "react-toastify";
 
 
 export default function Register() {
   // const [formData, setFormData] = useState({
+  //   firstName="",
+  //   lastName="",
   //   email: '',
   //   password: '',
   // });
- 
+ const { register, handleSubmit, errors, watch,reset } = useForm();
 
-  
-
-  
-  const { register, handleSubmit, errors, watch } = useForm();
   const onSubmit = async (data) => {
     try {
-      const response = await axios.post('https://app-72e33e07-be7e-4025-af7d-6061359ca520.cleverapps.io/authenticate', data);
-      localStorage.setItem('token', response.data.token);
-      console.log(response.data);
+      const response = await axios.post('https://app-72e33e07-be7e-4025-af7d-6061359ca520.cleverapps.io/register', data);
+    
+      console.log(response);
+      toast.success("Submitted the course data!", {
+        position: "bottom-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+      reset();
     } catch (error) {
-      console.error(error);
+     <p>Please check error!</p>
     }
   };
-
 
   const validatePhoneNumber = (value) => {
     const regex = /^[0-9\b]+$/; // Regex to allow only numbers
@@ -46,22 +55,21 @@ export default function Register() {
     <>
     
       <Header></Header>
-      <h1 className="signup-header">Please Register Here</h1>
+     
 <Container className="form-cont ms-4">
-
+<h1 className="signup-header">Please Register Here</h1>
 <Row>
-<Col xs={12} md={6}>
-<form>
+<Col xs={12} md={8}>
+<div>
         <form onSubmit={handleSubmit(onSubmit)}>
           <input
             placeholder="Enter your firstName"
             {...register("firstName", { required: true, maxLength: 20 })} 
             className="mb-2"
           />
-
+          {/* <p className="text-danger">{errors.firstName?.message}</p> */}
           <input placeholder="Enter your lastName" {...register("lastName", { required: true, maxLength: 20 })}   className="mb-2" />
-
-
+         
           <input
             placeholder="Enter your password"
             {...register("password", {
@@ -75,10 +83,10 @@ export default function Register() {
             })}
             className="mb-2"
           />
-
+       
           <input
             placeholder="confirm password"
-            {...register("confirmpassword", {
+            {...register("confirmPassword", {
               required: true,
               minLength: 8,
               validate: (value) =>
@@ -86,12 +94,13 @@ export default function Register() {
             })}
             className="mb-2"
           />
-
+  
           <input
             placeholder="Enter your address"
             {...register("address", { required: true, maxLength: 20 })}
             className="mb-2"
           />
+
 
           <input
             placeholder="Enter your phone number"
@@ -106,15 +115,15 @@ export default function Register() {
          
           <input type="submit"  className="bg-success border-0 text-light"/>
         </form>
-      </form>
+      </div>
            
           </Col>
 
 
-          <Col xs={12} md={6}>
+          <Col xs={12} md={4}>
           <video
                 loop="true"
-                autoplay="autoplay"
+                autoPlay="autoplay"
                 muted
                 width={400} height={400}
                 className="lotti-vid"

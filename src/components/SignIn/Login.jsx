@@ -30,7 +30,7 @@ export default function Login() {
     try {
       const response = await axios.post('https://app-72e33e07-be7e-4025-af7d-6061359ca520.cleverapps.io/authenticate', user);
       localStorage.setItem("token", response.data.token);
-      console.log(response.data);
+      console.log(response);
     } catch (error) {
       console.error(error);
     }
@@ -51,7 +51,7 @@ export default function Login() {
         <form onSubmit={handleSubmit}>
           <input
             placeholder="Enter your email"
-           
+            onChange={(e) => setEmail(e.target.value)}
             className="mb-4"
           />
           {/* <p className="text-danger">{errors.firstName?.message}</p> */}
@@ -59,10 +59,11 @@ export default function Login() {
          
           <input
             placeholder="Enter your password"
-          
+            onChange={(e) => setPassword(e.target.value)}
+            className="mb-4"
           />
        
-          <input type="submit"  className="bg-success border-0 text-light"/>
+          <input type="submit"  className="bg-success border-0 text-light" />
         </form>
       </div>
            

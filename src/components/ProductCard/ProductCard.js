@@ -11,6 +11,7 @@ import { CartState } from "../../Context/Context";
 const ProductCard = ({packages}) => {
   // const { title, description, img, price } = props.package;
   const {state:{cart},dispatch}=CartState()
+  console.log(cart)
   return (
     <div>
       <div
@@ -23,13 +24,13 @@ const ProductCard = ({packages}) => {
           <h5 class="card-title">{packages.title}</h5>
           <p class="card-text product-desc">{packages.description.slice(0, 20)}...</p>
           <p className="price-style m-2">TK {packages.price}</p>
-          <Button className="button-custom mx-1" size="sm">
-            <ShoppingCartOutlinedIcon onClick={()=>{
+          <Button className="button-custom mx-1" size="sm" onClick={()=>{
               dispatch({
                 type:"ADD_TO_CART",
                 payload:packages,
               })
-            }}/>
+            }}>
+            <ShoppingCartOutlinedIcon />
           </Button>
 
           <Button className="button-custom mx-1" size="sm">

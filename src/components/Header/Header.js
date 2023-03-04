@@ -5,8 +5,10 @@ import logo from "../../images/MainLogo.png";
 import SearchBar from "../SearchBar/SearchBar";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
+import { CartState } from "../../Context/Context";
 
 const Header = () => {
+  const {state:{cart}}=CartState();
   return (
     <div className="container header d-flex justify-content-between">
       <nav>
@@ -21,7 +23,7 @@ const Header = () => {
       <nav>
         <Link to="/home">
           <ShoppingCartOutlinedIcon />
-          <span className=""> CART (0)</span>
+          <span className="">{cart.length}</span>
         </Link>
         <Link to="/orders">
           <FavoriteBorderOutlinedIcon />

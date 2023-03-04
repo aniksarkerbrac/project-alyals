@@ -31,7 +31,7 @@ export default function Register() {
       const token = response.data.token;
       localStorage.setItem("token", token);
       // redirect to the dashboard or protected route
-          toast.success("Submitted the course data!", {
+          toast.success("Submitted the register data!", {
         position: "bottom-right",
         autoClose: 5000,
         hideProgressBar: false,

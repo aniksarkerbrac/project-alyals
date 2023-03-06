@@ -80,9 +80,9 @@ const Footer = () => {
           <hr className="mt-4" style={{ color: "#e8b2a3" }} />
           <div className="d-flex justify-content-between ">
             <div>
-              <img src={img1} alt="" height="25" width="25" className="me-2" />
-              <img src={img2} alt="" height="25" width="25" className="mx-2" />
-              <img src={img3} alt="" height="25" width="25" className="mx-2" />
+              <img src={img1} alt="" height="25" width="25" className="icons" />
+              <img src={img2} alt="" height="25" width="25" className="icons" />
+              <img src={img3} alt="" height="25" width="25" className="icons"/>
             </div>
             <p className="copyright">
               Copyright {new Date().getFullYear()} All Rights Reserved.

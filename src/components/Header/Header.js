@@ -30,7 +30,7 @@ const Header = () => {
           <span className=""> WISHLIST (0)</span>
         </Link>
         <Link to="/login">
-          <span className="">LOGIN</span>
+          <span className="">LOGIN/REGISTER</span>
         </Link>
       </nav>
     </div>

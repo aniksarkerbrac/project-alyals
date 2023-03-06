@@ -1,4 +1,4 @@
-.signup-header{
+.signin-header{
     font-family: "Hind Siliguri", sans-serif;
     color: #26235d;
     margin-top: 3rem;
@@ -8,24 +8,13 @@
     font-weight: 700;
     text-align: center;
 }
-.form-cont {
-   margin-left: 4rem;
-   padding-left: 2rem !important;
-   padding-right: 2rem !important;
-   
-}
-.nav-route{
-    text-decoration: none;
-}
-.route{
-    font-family: "Hind Siliguri", sans-serif;
-    text-decoration: none;
-    margin-top: 3rem;
-    font-weight: 700;
-    margin-left: 5.5rem;
-}
-
-input{
+/* .form-cont-signin {
+    margin-left: 4rem;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    
+ } */
+ input{
     display: block;
     border-radius: 5px;
     padding: 14px;
@@ -39,31 +28,43 @@ input::placeholder{
     font-family: "Hind Siliguri", sans-serif;
 color: #26235d;
 }
+.nav-route-signin{
+    text-decoration: none;
+}
+.route-signin{
+    font-family: "Hind Siliguri", sans-serif;
+    text-decoration: none;
+    margin-top: 3rem;
+    font-weight: 700;
+    margin-left: 5.5rem;
+}
 
 @media only screen and (max-width: 700px) {
-    .form-cont{
+    /* .form-cont-signin{
       
    padding-left: 4rem !important;
    padding-right: 4rem !important;
-    }
+    } */
 
     input{
       
         width: 100%;
         margin-bottom: 3rem;
     }
-    .signup-header{
+    .signin-header{
 font-size: 25px;
 
 margin-top: 4rem;
     }
-    .lotti-vid{
+    .lotti-vid-signin{
+        margin-left: 2.3rem;
         margin-top: 4rem;
         width: 250px;
         height: 250px;
     }
-  }
 
-  @media (min-width: 768px) and (max-width: 1024px) {
-   
+    .route-signin{
+        text-align: center;
+        margin-left: -1rem;
+    }
   }

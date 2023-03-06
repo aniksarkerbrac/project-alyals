@@ -7,9 +7,9 @@ import "./Register.css";
 import { Container, Row, Col } from "react-bootstrap";
 import axios from "axios";
 import { toast } from "react-toastify";
+import { NavLink } from "react-router-dom";
 
 export default function Register() {
- 
   const {
     register,
     handleSubmit,
@@ -17,9 +17,6 @@ export default function Register() {
     watch,
     reset,
   } = useForm();
-
-
-
 
   const onSubmit = async (data) => {
     console.log(data);
@@ -30,8 +27,8 @@ export default function Register() {
       );
       const token = response.data.token;
       localStorage.setItem("token", token);
-      // redirect to the dashboard or protected route
-        toast.success("Submitted the register data!", {
+
+      toast.success("Submitted the register data!", {
         position: "bottom-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -49,11 +46,10 @@ export default function Register() {
   return (
     <>
       <Header></Header>
-
-      <Container className="form-cont ms-4">
-        <h1 className="signup-header">Please Register Here</h1>
+      <h1 className="signup-header">Please Register Here</h1>
+      <Container className="form-cont">
         <Row>
-          <Col xs={12} md={8}>
+          <Col xs={12} md={6}>
             <div>
               <form onSubmit={handleSubmit(onSubmit)}>
                 <input
@@ -137,12 +133,15 @@ export default function Register() {
                 />
               </form>
 
-           
-
+              <NavLink className="nav-route" to="/login">
+                <p className="text-danger route">
+                  Already SignUp? Please Click Here..{" "}
+                </p>
+              </NavLink>
             </div>
           </Col>
 
-          <Col xs={12} md={4}>
+          <Col xs={12} md={6}>
             <video
               loop="true"
               autoPlay="autoplay"
@@ -157,8 +156,6 @@ export default function Register() {
                 style={{ marginTop: "4rem" }}
               />
             </video>
-
-            {/* <video src={regimg} width={400} height={400} loop style={{marginTop:'4rem'}}></video> */}
           </Col>
         </Row>
       </Container>

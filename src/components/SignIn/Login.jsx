@@ -24,7 +24,7 @@ export default function Login() {
         "https://app-72e33e07-be7e-4025-af7d-6061359ca520.cleverapps.io/authenticate",
         user
       );
-      localStorage.setItem("token", response.data.token);
+      localStorage.setItem("token", response.data.access_token);
       console.log(response);
     } catch (error) {
       console.error(error);
@@ -41,6 +41,8 @@ export default function Login() {
           <Col xs={12} md={6}>
             <div>
               <form onSubmit={handleSubmit}>
+
+                
                 <input
                   placeholder="Enter your email"
                   onChange={(e) => setEmail(e.target.value)}

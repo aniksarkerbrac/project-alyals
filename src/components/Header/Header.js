@@ -24,6 +24,7 @@ const Header = () => {
         <Link to="/home">
           <ShoppingCartOutlinedIcon />
           <span className="">{cart.length}</span>
+         
         </Link>
         <Link to="/orders">
           <FavoriteBorderOutlinedIcon />

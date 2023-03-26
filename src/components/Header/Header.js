@@ -6,9 +6,14 @@ import SearchBar from "../SearchBar/SearchBar";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import FavoriteBorderOutlinedIcon from "@mui/icons-material/FavoriteBorderOutlined";
 import { CartState } from "../../Context/Context";
+import { useSelector } from "react-redux";
 
 const Header = () => {
-  const {state:{cart}}=CartState();
+  // const {state:{cart}}=CartState();
+  const cart = useSelector((state) => state.product.cart);
+  const totalCart = cart.reduce((acc, item) => {
+    return acc + item.quantity;
+  }, 0);
   return (
     <div className="container header d-flex justify-content-between">
       <nav>
@@ -23,7 +28,7 @@ const Header = () => {
       <nav>
         <Link to="/home">
           <ShoppingCartOutlinedIcon />
-          <span className="">{cart.length}</span>
+          <span className="">{totalCart}</span>
          
         </Link>
         <Link to="/orders">
